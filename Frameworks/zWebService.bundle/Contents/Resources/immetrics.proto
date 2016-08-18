@@ -1,0 +1,37 @@
+package com.saasbee.webapp.proto;
+
+option java_package = "com.saasbee.webapp.proto";
+option java_outer_classname = "MetricsProtos";
+option optimize_for = LITE_RUNTIME;
+
+
+message IMMetricsData {
+    required string jid 			= 1;  
+    required int64 timeStart 		= 2;      
+    required int64 timeEnd 			= 3;      	
+    required int64 imSent 			= 4;      
+    required int64 imRcvd 			= 5;     
+    required int64 emojiSent 		= 6;    
+    required int64 emojiRcvd 		= 7;     
+    required int64 fileSent 		= 8;    
+    required int64 fileRcvd 		= 9;    
+    required int64 imgSent 			= 10;    
+    required int64 imgRcvd 			= 11;  
+    required int64 voiceSent 		= 12; 
+    required int64 voiceRcvd 		= 13; 
+	required int64 videoSent 		= 14; 
+    required int64 videoRcvd 		= 15; 
+	required int64 groupImSent		= 16;
+	required int64 groupImRcvd		= 17;
+	required int64 e2eImSent		= 18;
+	required int64 e2eImRcvd		= 19;
+    required int64 login 			= 20;   
+    required int64 logout 			= 21; 
+    required int64 callSent 		= 22; 
+    required int64 callRcvd 		= 23;
+    required string osInfo   		= 24; 
+}
+
+message IMMetricsDataList   {
+	repeated IMMetricsData imMetricsData    = 1;
+}
